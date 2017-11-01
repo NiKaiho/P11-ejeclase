@@ -1,8 +1,9 @@
 //Semestre 2017 - 2
 //************************************************************//
 //************************************************************//
-//************** Alumno: ALVAREZ POCEROS ABRAHAM ARTURO*  ****//
-//*************		VISUAL STUDIO 2017		*****//
+//************** Alumno (s):ALVAREZ POCEROS ABRAHAM ARTURO ****//
+//*************	VISUAL STUDIO 2017			******//
+//*************						******//
 //************************************************************//
 //************************************************************//
 
@@ -18,8 +19,20 @@ static GLuint ciudad_display_list;	//Display List for the Monito
 
 									//NEW// Keyframes
 									//Variables de dibujo y manipulacion
-float posX = 0, posY = 2.5, posZ = -3.5, rotRodIzq = 0, giroBrazoIzq = 0, rotRodDer = 0, giroBrazoDer = 0, giroPieDer = 0, giroPieIzq = 0;
-float giroMonito = 0, giroBrazoDer2= 0.0, giroBrazoIzq2 = 0, giroPieIzq2=0, giroPieDer2=0;
+float posX = 0;
+float posY = 0.0;
+float posZ = 0.0;
+float rotRodIzq = 0;
+float giroBrazoIzq = 0;
+float rotRodDer = 0;
+float giroBrazoDer = 0;
+float giroPieDer = 0;
+float giroPieIzq = 0;
+float giroMonito = 0;
+float giroBrazoDer2 = 0.0;
+float giroBrazoIzq2 = 0;
+float giroPieIzq2 = 0;
+float giroPieDer2 = 0;
 
 #define MAX_FRAMES 6
 int i_max_steps = 190;
@@ -1097,7 +1110,11 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	KeyFrame[0].giroBrazoDer2 = 0;
 	KeyFrame[0].giroPieIzq2 = 0;
 	KeyFrame[0].giroPieDer2 = 0;
-	//
+	/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+	/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+	/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+	/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+	/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 	KeyFrame[1].posX = 0.0;
@@ -1379,7 +1396,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//glScalef(0.5, 0.5, 0.5);
 	//monito();
 	glCallList(ciudad_display_list);
-	glTranslatef(posX, posY, posZ);
+	glTranslatef(0.0, 2.5, -3.5);
 	glRotatef(giroMonito, 0, 1, 0);
 	monito();
 	glDisable(GL_COLOR_MATERIAL);
